@@ -50,6 +50,11 @@ function calcular() {
     </div>
   </section>
   `}
+  if(cuenta==0){
+    nhr= document.querySelector("#nhr")
+    nhr.innerHTML ="No hay resultados para esta búsqueda"
+    nhr.style.color = "red"
+  }
       const d = document.querySelector(".propiedades");
       d.innerHTML = html;
       parrafo.innerHTML = cuenta
