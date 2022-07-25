@@ -1,6 +1,7 @@
-ele = document.querySelector(".propiedades")
-for (let valor of propiedadesJSON)
-    ele.innerHTML +=  `
+d = document.querySelector(".propiedades")
+let html = ""
+for (let valor of propiedadesJSON) {
+        html += `
     <div class="propiedades">
         <div class="propiedad">
             <div class="img" style="background-image: url('${valor.src}')"></div>
@@ -16,14 +17,15 @@ for (let valor of propiedadesJSON)
         </div>
     </div>
   </section>
-  `
+  `}
+    d.innerHTML = html;
+         
 function calcular() {
     let cuartos = document.querySelector("#cuartos").value;
     let metrosDesde = document.querySelector("#desde").value;
     let metrosHasta = document.querySelector("#hasta").value;
     let parrafo = document.querySelector('#resultado');
     cuenta = 0
-    
     if (cuartos == "" || metrosDesde == "" || metrosHasta == "") {
       alert("Faltan campos por llenar");
     }
@@ -48,8 +50,8 @@ function calcular() {
     </div>
   </section>
   `}
-      const ele = document.querySelector(".propiedades");
-      ele.innerHTML = html;
+      const d = document.querySelector(".propiedades");
+      d.innerHTML = html;
       parrafo.innerHTML = cuenta
     }
   };
